@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coptics Premium Detailing - Professional Car Detailing Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-car"></i>
+                <span>Coptics Premium Detailing</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#booking">Book Appointment</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Premium Car Detailing Excellence</h1>
+            <p>Transform Your Vehicle's Appearance</p>
+            <a href="#booking" class="cta-button">Book Your Appointment Now</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Premium Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Exterior Cleaning</h3>
+                    <p>Professional exterior wash and protection. We clean every detail of your vehicle's exterior to restore its shine.</p>
+                    <span class="price">$35</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Interior Detailing</h3>
+                    <p>Complete interior cleaning and conditioning. Vacuum, sanitize, and restore all interior surfaces to pristine condition.</p>
+                    <span class="price">$75</span>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3>Full Service Package</h3>
+                    <p>Complete exterior and interior detailing. Our most popular package for total vehicle restoration.</p>
+                    <span class="price">$99</span>
+                </div>
+
+                <div class="service-card premium">
+                    <div class="service-icon">
+                        <i class="fas fa-shield"></i>
+                    </div>
+                    <h3>Ceramic Coating Add-On</h3>
+                    <p>Premium protection layer. Add professional ceramic coating to any service for long-lasting protection and shine.</p>
+                    <span class="price">+$30</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Simple & Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Exterior Cleaning</h3>
+                    <p class="pricing-amount">$35</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Professional wash</li>
+                        <li><i class="fas fa-check"></i> Wheel cleaning</li>
+                        <li><i class="fas fa-check"></i> Exterior protection</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card featured">
+                    <span class="best-value">BEST VALUE</span>
+                    <h3>Full Service Package</h3>
+                    <p class="pricing-amount">$99</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Complete exterior</li>
+                        <li><i class="fas fa-check"></i> Full interior detail</li>
+                        <li><i class="fas fa-check"></i> All surfaces restored</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Interior Detailing</h3>
+                    <p class="pricing-amount">$75</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Vacuum & sanitize</li>
+                        <li><i class="fas fa-check"></i> Interior conditioning</li>
+                        <li><i class="fas fa-check"></i> Detail protection</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="add-on-pricing">
+                <h3>Premium Add-On</h3>
+                <p><strong>Ceramic Coating:</strong> +$30 (Add to any service for long-lasting protection)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2>Book Your Appointment</h2>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicle">Vehicle Model *</label>
+                    <input type="text" id="vehicle" name="vehicle" placeholder="e.g., 2021 Honda Civic" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Selection *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="exterior">Exterior Cleaning - $35</option>
+                        <option value="interior">Interior Detailing - $75</option>
+                        <option value="full">Full Service Package - $99</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ceramic">
+                        <input type="checkbox" id="ceramic" name="ceramic">
+                        Add Ceramic Coating (+$30)
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Preferred Time *</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Any special requests or details about your vehicle..."></textarea>
+                </div>
+
+                <div class="price-summary">
+                    <p>Estimated Total: <span id="totalPrice">$0</span></p>
+                </div>
+
+                <button type="submit" class="submit-button">Confirm Booking</button>
+            </form>
+            <p class="form-note">We'll contact you shortly to confirm your appointment at <strong>348-265-3842</strong></p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p><a href="tel:348-265-3842">(348) 265-3842</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@copticspremium.com">info@copticspremium.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <h3>Send us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Coptics Premium Detailing. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
