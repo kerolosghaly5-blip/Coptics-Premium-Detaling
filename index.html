@@ -12,14 +12,25 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <i class="fas fa-car"></i>
+                <svg class="coptic-cross" width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#d4af37">
+                        <rect x="40" y="10" width="20" height="80" rx="3"/>
+                        <rect x="10" y="40" width="80" height="20" rx="3"/>
+                        <circle cx="50" cy="50" r="15" fill="none" stroke="#d4af37" stroke-width="2"/>
+                        <circle cx="50" cy="25" r="4" fill="#d4af37"/>
+                        <circle cx="75" cy="50" r="4" fill="#d4af37"/>
+                        <circle cx="50" cy="75" r="4" fill="#d4af37"/>
+                        <circle cx="25" cy="50" r="4" fill="#d4af37"/>
+                    </g>
+                </svg>
                 <span>Coptics Premium Detailing</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#booking">Book Appointment</a></li>
+                <li><a href="#booking">Book Now</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -27,18 +38,176 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <svg class="floating-car" style="left: 5%; top: 20%;" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="100" cy="70" rx="60" ry="20" fill="rgba(212, 175, 55, 0.3)"/>
+                <path d="M 50 70 Q 50 40 70 35 L 130 35 Q 150 40 150 70" fill="rgba(212, 175, 55, 0.3)" stroke="rgba(212, 175, 55, 0.5)" stroke-width="2"/>
+                <circle cx="70" cy="75" r="8" fill="rgba(212, 175, 55, 0.4)"/>
+                <circle cx="130" cy="75" r="8" fill="rgba(212, 175, 55, 0.4)"/>
+            </svg>
+        </div>
         <div class="hero-content">
             <h1>Premium Car Detailing Excellence</h1>
             <p>Transform Your Vehicle's Appearance</p>
             <a href="#booking" class="cta-button">Book Your Appointment Now</a>
         </div>
-        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Before & After Showcase</h2>
+            <p class="section-subtitle">See the incredible transformation of our premium detailing services</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="before-after-container">
+                        <div class="before-section">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="100" cy="100" rx="50" ry="25" fill="#999" opacity="0.5"/>
+                                <path d="M 60 100 Q 60 60 80 50 L 120 50 Q 140 60 140 100" fill="#999" stroke="#666" stroke-width="2"/>
+                                <circle cx="80" cy="105" r="8" fill="#555"/>
+                                <circle cx="120" cy="105" r="8" fill="#555"/>
+                                <rect x="70" y="65" width="10" height="8" fill="#666"/>
+                                <rect x="120" y="65" width="10" height="8" fill="#666"/>
+                            </svg>
+                            <span class="label">BEFORE</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="after-section">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="100" cy="100" rx="50" ry="25" fill="#1a1a2e" opacity="0.8"/>
+                                <defs>
+                                    <radialGradient id="shine1" cx="30%" cy="30%">
+                                        <stop offset="0%" style="stop-color:#fff; stop-opacity:0.6"/>
+                                        <stop offset="100%" style="stop-color:#1a1a2e; stop-opacity:0"/>
+                                    </radialGradient>
+                                </defs>
+                                <path d="M 60 100 Q 60 60 80 50 L 120 50 Q 140 60 140 100" fill="#1a1a2e" stroke="#333" stroke-width="2"/>
+                                <ellipse cx="85" cy="70" rx="15" ry="10" fill="url(#shine1)"/>
+                                <circle cx="80" cy="105" r="8" fill="#222"/>
+                                <circle cx="120" cy="105" r="8" fill="#222"/>
+                                <rect x="70" y="65" width="10" height="8" fill="#111"/>
+                                <rect x="120" y="65" width="10" height="8" fill="#111"/>
+                            </svg>
+                            <span class="label">AFTER</span>
+                        </div>
+                    </div>
+                    <h3>Exterior Detailing</h3>
+                    <p>Professional wash and protection - $35</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="before-after-container">
+                        <div class="before-section">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="50" y="40" width="100" height="80" fill="#bbb" stroke="#999" stroke-width="2" rx="5"/>
+                                <rect x="60" y="50" width="30" height="25" fill="#555"/>
+                                <rect x="110" y="50" width="30" height="25" fill="#555"/>
+                                <line x1="70" y1="90" x2="130" y2="90" stroke="#999" stroke-width="1" opacity="0.5"/>
+                                <ellipse cx="100" cy="115" rx="20" ry="8" fill="#999" opacity="0.3"/>
+                            </svg>
+                            <span class="label">BEFORE</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="after-section">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="interior" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#333;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#111;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect x="50" y="40" width="100" height="80" fill="url(#interior)" stroke="#d4af37" stroke-width="2" rx="5"/>
+                                <rect x="60" y="50" width="30" height="25" fill="#1a1a2e" stroke="#888" stroke-width="1"/>
+                                <rect x="110" y="50" width="30" height="25" fill="#1a1a2e" stroke="#888" stroke-width="1"/>
+                                <line x1="70" y1="90" x2="130" y2="90" stroke="#d4af37" stroke-width="2" opacity="0.7"/>
+                                <ellipse cx="100" cy="115" rx="20" ry="8" fill="#d4af37" opacity="0.2"/>
+                            </svg>
+                            <span class="label">AFTER</span>
+                        </div>
+                    </div>
+                    <h3>Interior Detailing</h3>
+                    <p>Complete interior restoration - $75</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="before-after-container">
+                        <div class="before-section">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="100" cy="80" rx="55" ry="30" fill="#aaa" opacity="0.6"/>
+                                <path d="M 50 80 Q 50 40 75 30 L 125 30 Q 150 40 150 80 L 150 90 Q 100 100 50 90 Z" fill="#aaa" stroke="#888" stroke-width="2"/>
+                                <circle cx="75" cy="85" r="10" fill="#666"/>
+                                <circle cx="125" cy="85" r="10" fill="#666"/>
+                            </svg>
+                            <span class="label">BEFORE</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="after-section">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <radialGradient id="shine2" cx="35%" cy="25%">
+                                        <stop offset="0%" style="stop-color:#fff;stop-opacity:0.7"/>
+                                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:0.3"/>
+                                        <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:0"/>
+                                    </radialGradient>
+                                </defs>
+                                <ellipse cx="100" cy="80" rx="55" ry="30" fill="#0f1823" opacity="0.9"/>
+                                <ellipse cx="100" cy="80" rx="55" ry="30" fill="url(#shine2)"/>
+                                <path d="M 50 80 Q 50 40 75 30 L 125 30 Q 150 40 150 80 L 150 90 Q 100 100 50 90 Z" fill="#0f1823" stroke="#d4af37" stroke-width="2"/>
+                                <circle cx="75" cy="85" r="10" fill="#111"/>
+                                <circle cx="125" cy="85" r="10" fill="#111"/>
+                            </svg>
+                            <span class="label">AFTER</span>
+                        </div>
+                    </div>
+                    <h3>Full Service Package</h3>
+                    <p>Exterior + Interior combo - $99</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="before-after-container">
+                        <div class="before-section">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="100" cy="80" rx="55" ry="30" fill="#999" opacity="0.5"/>
+                                <path d="M 50 80 Q 50 40 75 30 L 125 30 Q 150 40 150 80 L 150 90 Q 100 100 50 90 Z" fill="#999" stroke="#666" stroke-width="2"/>
+                                <circle cx="75" cy="85" r="10" fill="#555"/>
+                                <circle cx="125" cy="85" r="10" fill="#555"/>
+                                <line x1="60" y1="60" x2="140" y2="60" stroke="#888" stroke-width="1" opacity="0.3"/>
+                            </svg>
+                            <span class="label">BEFORE</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="after-section">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <radialGradient id="ceramic" cx="40%" cy="20%">
+                                        <stop offset="0%" style="stop-color:#fff;stop-opacity:0.8"/>
+                                        <stop offset="40%" style="stop-color:#d4af37;stop-opacity:0.4"/>
+                                        <stop offset="100%" style="stop-color:#0f1823;stop-opacity:0"/>
+                                    </radialGradient>
+                                </defs>
+                                <ellipse cx="100" cy="80" rx="55" ry="30" fill="#0a0f1a"/>
+                                <ellipse cx="100" cy="80" rx="55" ry="30" fill="url(#ceramic)"/>
+                                <path d="M 50 80 Q 50 40 75 30 L 125 30 Q 150 40 150 80 L 150 90 Q 100 100 50 90 Z" fill="#0a0f1a" stroke="#d4af37" stroke-width="2.5"/>
+                                <circle cx="75" cy="85" r="10" fill="#000"/>
+                                <circle cx="125" cy="85" r="10" fill="#000"/>
+                                <line x1="60" y1="60" x2="140" y2="60" stroke="#d4af37" stroke-width="2" opacity="0.6"/>
+                            </svg>
+                            <span class="label">AFTER</span>
+                        </div>
+                    </div>
+                    <h3>Ceramic Coating</h3>
+                    <p>Premium protection layer - +$30</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <h2>Our Premium Services</h2>
+            <p class="section-subtitle">Professional car detailing tailored for your vehicle</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
@@ -79,10 +248,109 @@
         </div>
     </section>
 
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Why Choose Coptics Premium</h2>
+            <p class="section-subtitle">Experience the difference with our professional detailing team</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>We use only the finest products and techniques to ensure your vehicle gets the best care possible.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Fast Service</h3>
+                    <p>Quick turnaround times without compromising on quality. Get your car ready in no time.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Professional Team</h3>
+                    <p>Experienced detailers dedicated to making your vehicle look its absolute best every time.</p>
+                </div>
+
+                <div class="why-card">
+                    <div class="why-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing with premium quality. We offer the best value for your money in the area.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Customer Testimonials</h2>
+            <p class="section-subtitle">See what our satisfied customers have to say</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Amazing service! My car looks brand new. The team was professional and thorough. Highly recommended!"</p>
+                    <p class="author">- John Mitchell</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Best detailing service I've ever had. The ceramic coating makes my car shine like new. Worth every penny!"</p>
+                    <p class="author">- Sarah Johnson</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Professional, reliable, and affordable. The attention to detail is incredible. I'll definitely be back!"</p>
+                    <p class="author">- Mike Rodriguez</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Fantastic experience from start to finish. The booking was easy and the service was exceptional!"</p>
+                    <p class="author">- Lisa Chen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
         <div class="container">
             <h2>Simple & Transparent Pricing</h2>
+            <p class="section-subtitle">No hidden fees, just quality service at fair prices</p>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <h3>Exterior Cleaning</h3>
@@ -117,7 +385,7 @@
             </div>
             <div class="add-on-pricing">
                 <h3>Premium Add-On</h3>
-                <p><strong>Ceramic Coating:</strong> +$30 (Add to any service for long-lasting protection)</p>
+                <p><strong>Ceramic Coating:</strong> +$30 (Add to any service for long-lasting protection and glossy finish)</p>
             </div>
         </div>
     </section>
@@ -126,6 +394,7 @@
     <section id="booking" class="booking">
         <div class="container">
             <h2>Book Your Appointment</h2>
+            <p class="section-subtitle">Get started with your premium detailing service today</p>
             <form class="booking-form" id="bookingForm">
                 <div class="form-group">
                     <label for="name">Full Name *</label>
@@ -185,7 +454,7 @@
 
                 <button type="submit" class="submit-button">Confirm Booking</button>
             </form>
-            <p class="form-note">We'll contact you shortly to confirm your appointment at <strong>348-265-3842</strong></p>
+            <p class="form-note">We'll contact you shortly to confirm your appointment at <strong>(348) 265-3842</strong></p>
         </div>
     </section>
 
@@ -193,13 +462,14 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get In Touch</h2>
+            <p class="section-subtitle">Have questions? We're here to help!</p>
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
                             <h3>Phone</h3>
-                            <p><a href="tel:348-265-3842">(348) 265-3842</a></p>
+                            <p><a href="tel:3482653842">(348) 265-3842</a></p>
                         </div>
                     </div>
 
@@ -217,6 +487,7 @@
                             <h3>Hours</h3>
                             <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                             <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            <p>Sunday: Closed</p>
                         </div>
                     </div>
                 </div>
@@ -243,11 +514,44 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Coptics Premium Detailing. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Coptics Premium Detailing</h4>
+                    <p>Professional car detailing services with premium quality and affordable prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Exterior Cleaning</a></li>
+                        <li><a href="#services">Interior Detailing</a></li>
+                        <li><a href="#services">Full Package</a></li>
+                        <li><a href="#services">Ceramic Coating</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="tel:3482653842">☎ (348) 265-3842</a></li>
+                        <li><a href="mailto:info@copticspremium.com">📧 info@copticspremium.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Coptics Premium Detailing. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </div>
     </footer>
