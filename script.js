@@ -1,7 +1,7 @@
 // ==========================================
-// COPTICS PREMIUM DETAILING - JAVASCRIPT
+// COPTICS PREMIUM DETAILING - ENHANCED JAVASCRIPT
 // Professional Car Detailing Website
-// ==========================================
+// ========================================== */
 
 // Pricing Configuration
 const pricing = {
@@ -17,6 +17,7 @@ const coptics = {
     init: function() {
         this.setupEventListeners();
         this.setupMinDate();
+        this.animateOnScroll();
     },
 
     // Setup all event listeners
@@ -50,6 +51,30 @@ const coptics = {
             const today = new Date().toISOString().split('T')[0];
             dateInput.setAttribute('min', today);
         }
+    },
+
+    // Animate elements on scroll
+    animateOnScroll: function() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .pricing-card, .contact-item, .why-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
     },
 
     // Update total price based on selections
@@ -126,7 +151,7 @@ const coptics = {
         this.saveBooking(booking);
 
         // Show success message
-        this.showSuccessMessage('bookingForm', 'Booking submitted successfully! We will contact you at ' + phone + ' to confirm your appointment.');
+        this.showSuccessMessage('bookingForm', '✅ Booking submitted successfully! We will contact you at ' + phone + ' to confirm your appointment.');
 
         // Reset form
         document.getElementById('bookingForm').reset();
@@ -134,6 +159,11 @@ const coptics = {
 
         // Log to console for verification
         console.log('New Booking:', booking);
+        
+        // Scroll to confirmation
+        setTimeout(() => {
+            scrollTo('#booking');
+        }, 500);
     },
 
     // Handle contact form submission
@@ -164,7 +194,7 @@ const coptics = {
         this.saveMessage(msg);
 
         // Show success message
-        this.showSuccessMessage('contactForm', 'Thank you for your message! We will get back to you soon at ' + email);
+        this.showSuccessMessage('contactForm', '✅ Thank you for your message! We will get back to you soon at ' + email);
 
         // Reset form
         form.reset();
@@ -192,6 +222,12 @@ const coptics = {
         const form = document.getElementById(formId);
         if (!form) return;
 
+        // Remove existing success messages
+        const existingMsg = form.parentNode.querySelector('.success-message');
+        if (existingMsg) {
+            existingMsg.remove();
+        }
+
         // Create success message element
         const successDiv = document.createElement('div');
         successDiv.className = 'success-message show';
@@ -200,10 +236,14 @@ const coptics = {
         // Insert before form
         form.parentNode.insertBefore(successDiv, form);
 
-        // Remove after 5 seconds
+        // Remove after 6 seconds
         setTimeout(() => {
-            successDiv.remove();
-        }, 5000);
+            successDiv.style.opacity = '0';
+            successDiv.style.transition = 'opacity 0.3s ease-out';
+            setTimeout(() => {
+                successDiv.remove();
+            }, 300);
+        }, 6000);
     },
 
     // View all bookings (for business owner)
@@ -332,6 +372,14 @@ const coptics = {
     }
 };
 
+// Global scrollTo function
+function scrollTo(id) {
+    const element = document.querySelector(id);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     coptics.init();
@@ -351,36 +399,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.service-card, .pricing-card, .contact-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'all 0.6s ease-out';
-    observer.observe(el);
-});
-
-// Console greeting
-console.log('%c🚗 Welcome to Coptics Premium Detailing! 🚗', 'font-size: 20px; color: #d32f2f; font-weight: bold;');
-console.log('%cUse these commands to manage your business:', 'font-size: 14px; font-weight: bold;');
-console.log('%ccoptics.viewBookings()        // View all bookings', 'color: #0f1823; font-weight: bold;');
-console.log('%ccoptics.viewMessages()        // View all messages', 'color: #0f1823; font-weight: bold;');
-console.log('%ccoptics.getTodayBookings()    // View today\'s bookings', 'color: #0f1823; font-weight: bold;');
-console.log('%ccoptics.getStats()            // View business statistics', 'color: #0f1823; font-weight: bold;');
-console.log('%ccoptics.searchByName("John")  // Search bookings by customer name', 'color: #0f1823; font-weight: bold;');
-console.log('%ccoptics.exportBookings()      // Download all bookings as JSON', 'color: #0f1823; font-weight: bold;');
-console.log('%ccoptics.clearData()           // Delete all data (be careful!)', 'color: #d32f2f; font-weight: bold;');
-console.log('%cPhone: (348) 265-3842', 'font-size: 12px; color: #d4af37;');
+// Console greeting and instructions
+console.log('%c🚗 Welcome to Coptics Premium Detailing! 🚗', 'font-size: 22px; color: #d32f2f; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);');
+console.log('%c✨ Premium Car Detailing Services ✨', 'font-size: 16px; color: #d4af37; font-weight: bold;');
+console.log('%c\nUse these commands to manage your business:', 'font-size: 13px; font-weight: bold; color: #0f1823;');
+console.log('%ccoptics.viewBookings()        // View all bookings', 'color: #0f1823; font-weight: bold; padding: 5px;');
+console.log('%ccoptics.viewMessages()        // View all messages', 'color: #0f1823; font-weight: bold; padding: 5px;');
+console.log('%ccoptics.getTodayBookings()    // View today\'s bookings', 'color: #0f1823; font-weight: bold; padding: 5px;');
+console.log('%ccoptics.getStats()            // View business statistics', 'color: #0f1823; font-weight: bold; padding: 5px;');
+console.log('%ccoptics.searchByName("John")  // Search bookings by customer name', 'color: #0f1823; font-weight: bold; padding: 5px;');
+console.log('%ccoptics.searchByEmail("john@email.com")  // Search by email', 'color: #0f1823; font-weight: bold; padding: 5px;');
+console.log('%ccoptics.exportBookings()      // Download all bookings as JSON', 'color: #0f1823; font-weight: bold; padding: 5px;');
+console.log('%ccoptics.exportMessages()      // Download all messages as JSON', 'color: #0f1823; font-weight: bold; padding: 5px;');
+console.log('%ccoptics.clearData()           // Delete all data (be careful!)', 'color: #d32f2f; font-weight: bold; padding: 5px;');
+console.log('%c\nPhone: (348) 265-3842', 'font-size: 12px; color: #d4af37; font-weight: bold;');
+console.log('%cphone: (348) 265-3842', 'font-size: 11px; color: #999;');
